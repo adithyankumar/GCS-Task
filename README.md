@@ -1,5 +1,5 @@
 # GCS-Task
-GCS Task app will fetch latest Github open issues and display. 
+GCS Task app will fetch latest Github open issues and display based on update time.
 
 - Used MVVM architecture , data binding and viewmodel
 - List lastest open issue based on updated time
