@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Game Change Solutions</string>
+    <string name="error">Error</string>
+    <string name="error_no_comments">No comments available</string>
+    <string name="error_no_issues">No issues available</string>
+    <string name="error_data_sync_failed">Data sync failed for some reason. Please try again.</string>
+    <string name="exit">Exit</string>
+    <string name="try_again">Try Again</string>
+    <string name="error_no_internet">No internet connection. Please try again.</string>
+    <string name="internet_available" tools:keep="@string/internet_available">Internet Available!!!</string>
+    <string name="comments">Comments</string>
+    <string name="user_pic">User pic</string>
+</resources>
