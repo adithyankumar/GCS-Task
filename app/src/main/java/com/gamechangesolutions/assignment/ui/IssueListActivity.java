@@ -1,6 +1,7 @@
 package com.gamechangesolutions.assignment.ui;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class IssueListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i("issueList", "onCreate: ");
         binding = DataBindingUtil.setContentView(this, R.layout.activity_issue_list);
         issueListViewModel = ViewModelProviders.of(this).get(IssueListViewModel.class);
         init();

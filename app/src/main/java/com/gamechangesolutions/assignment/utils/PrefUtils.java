@@ -25,7 +25,7 @@ public class PrefUtils {
     public void setString(String key, String value) {
         editor.putString(key, value);
         boolean status = editor.commit();
-        Log.i(TAG, "setString: commit " + status);
+        Log.i(TAG, "setString: key : " + key + "\tvalue : " + value + "\tcommitStatus : " + status);
     }
 
     public String getString(String key) {
@@ -35,7 +35,7 @@ public class PrefUtils {
     public void setInt(String key, int value) {
         editor.putInt(key, value);
         boolean status = editor.commit();
-        Log.i(TAG, "setInt: commit " + status);
+        Log.i(TAG, "setInt: key : " + key + "\tvalue : " + value + "\tcommitStatus : " + status);
     }
 
     public int getInt(String key) {
@@ -45,7 +45,7 @@ public class PrefUtils {
     public void setFloat(String key, float value) {
         editor.putFloat(key, value);
         boolean status = editor.commit();
-        Log.i(TAG, "setFloat: commit " + status);
+        Log.i(TAG, "setFloat: key : " + key + "\tvalue : " + value + "\tcommitStatus : " + status);
     }
 
     public float getFloat(String key) {
@@ -55,7 +55,7 @@ public class PrefUtils {
     public void setBoolean(String key, boolean value) {
         editor.putBoolean(key, value);
         boolean status = editor.commit();
-        Log.i(TAG, "setBoolean: commit " + status);
+        Log.i(TAG, "setBoolean: key : " + key + "\tvalue : " + value + "\tcommitStatus : " + status);
     }
 
     public boolean getBoolean(String key) {

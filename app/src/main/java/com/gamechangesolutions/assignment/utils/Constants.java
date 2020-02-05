@@ -16,7 +16,8 @@ public interface Constants {
     String RESULT_MSG = "result_msg";
     String DATA_SYNCED_OFFLINE = "data_synced_offline";
     String LATEST_DATA_SYNCED_OFFLINE = "latest_data_synced_offline";
-    long SPLASH_SCREEN_DELAY = 1000;
+    long START_DATA_SYNC_DELAY = 5000;
+    int NUM_OF_THREAD = 4;
 
     interface DataSyncResultMsg {
         String PLEASE_TRY_AGAIN = "Please try again";

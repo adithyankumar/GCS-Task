@@ -19,10 +19,13 @@ import com.gamechangesolutions.assignment.network.RetrofitClient;
 import com.gamechangesolutions.assignment.utils.Constants;
 import com.gamechangesolutions.assignment.utils.NotificationMessage;
 import com.gamechangesolutions.assignment.utils.PrefUtils;
+import com.gamechangesolutions.assignment.viewmodel.SplashViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 import retrofit2.Call;
 import retrofit2.Response;
@@ -83,6 +86,11 @@ public class DataRepository {
                 }
                 // set the @Constants.DATA_SYNCED_OFFLINE value to true after successful sync
                 prefUtils.setBoolean(Constants.DATA_SYNCED_OFFLINE, true);
+                new ScheduledThreadPoolExecutor(Constants.NUM_OF_THREAD).schedule(() -> {
+                    // initiate the work manager to sync data after 24 hours
+                    Log.i(TAG, "started work manager for data sync after 24 hours ");
+                    SplashViewModel.syncData(mContext, true);
+                }, Constants.START_DATA_SYNC_DELAY, TimeUnit.MILLISECONDS);
                 return result[0] = ListenableWorker.Result.success(resultMsg(Constants.DataSyncResultMsg.DATA_SYNCED_SUCCESS));
             }
             return result[0] = ListenableWorker.Result.failure(resultMsg(Objects.requireNonNull(response.errorBody()).string()));

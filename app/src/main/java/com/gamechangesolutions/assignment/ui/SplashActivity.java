@@ -110,9 +110,7 @@ public class SplashActivity extends AppCompatActivity {
                     activitySplashBinding.progressBar.setVisibility(View.GONE);
                     if (currentState == WorkInfo.State.SUCCEEDED) {
                         Log.i(TAG, "Data sync completed");
-                        // initiate the work manager to sync data after 24 hours
-                        splashViewModel.syncData(mContext, true);
-                        printData();
+                        // printData();
                         // if the State is Succeeded then move to next screen
                         moveToIssueListScreen();
                     } else if (currentState == WorkInfo.State.FAILED) {

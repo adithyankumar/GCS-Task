@@ -59,8 +59,8 @@ public class SplashViewModel extends AndroidViewModel {
     }
 
 
-    public WorkManager syncData(Context context, boolean delaySync) {
-        Log.e(TAG, "started syncData delayed : " + delaySync);
+    public static WorkManager syncData(Context context, boolean delaySync) {
+        Log.i(TAG, "started syncData delayed : " + delaySync);
         WorkManager workManager = WorkManager.getInstance(context);
 
         OneTimeWorkRequest.Builder syncDataRequestBuilder = new OneTimeWorkRequest.Builder(SyncDataWorker.class);
